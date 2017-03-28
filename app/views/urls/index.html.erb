@@ -1,0 +1,12 @@
+<h1>Enter The Url You Would Like Shortened</h1>
+<div class="urls">
+<%= form_for @new_url do |f| %>
+<%= f.text_field :original_url %>
+<%= f.submit %>
+<% end %>
+
+</div>
+
+<%  @url.each do |x| %>
+<%= link_to "#{x.id}", x %> <%= x.original_url%> </br>
+<% end %>
